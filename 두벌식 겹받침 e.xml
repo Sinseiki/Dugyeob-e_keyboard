@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <InputEntry>
-	<InputSchemeSetting flag="ADVSCH_HANGUL_QUICKTYPE" remark="&#x01;두겹이(두벌식 겹받침 e) - 만든이 : 신세기&#x0D;&#x0A;&#x0D;&#x0A;- 표준 두벌식을 개량한 자판으로 표준 두벌식의 모든 기능을 지원합니다.&#x0D;&#x0A;- 초성과 중성을 입력하면 I, J, K, L 자판이 겹받침 ㅄ, ㄶ, ㅆ, ㄺ로 일시적으로 자동으로 변경됩니다.&#x0D;&#x0A;- 이 네 키는 '받침 자리'에서만 겹받침으로 입력됩니다.&#x0D;&#x0A;- 그 외의 겹받침은 두 키를 동시에 누르는 '모아치기'로 입력하실 수 있습니다.&#x0D;&#x0A;  (예) ㅀ은 ㄹ과 ㅎ을 동시에 눌러서 입력하실 수 있습니다.)&#x0D;&#x0A;- 이중모음이 가능한 경우 이중모음이 겹받침보다 우선적으로 입력됩니다.&#x0D;&#x0A;- 익숙하지 않으시다면 기존 두벌식 입력도 그대로 사용하실 수 있습니다.&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;※ 별도로 제공되는 모아치기 프로그램을 사용하시면 초성과 중성을 동시에 입력하실 수 있습니다.&#x0D;&#x0A;  (예) '광'을 입력시, 'ㄱ', 'ㅗ', 'ㅏ'을 동시에 누른 후에 종성인 'ㅇ'을 누르시면 입력됩니다.)&#x0D;&#x0A;- Shift를 사용하는 글자(ㅉ, ㅒ 등등)는 모아치기 하실 수 없습니다.&#x0D;&#x0A;- 제대로 글자가 나오지 않는 경우에는 F8키를 누르셔서 모아치기 기능을 On으로 켜주세요." object="CAdvancedScheme">
+	<InputSchemeSetting flag="ADVSCH_HANGUL_QUICKTYPE" remark="&#x01;두겹이(두벌식 겹받침 e) - 만든이 : 신세기&#x0D;&#x0A;&#x0D;&#x0A;- 표준 두벌식을 개량한 자판으로 표준 두벌식의 모든 기능을 지원합니다.&#x0D;&#x0A;- 초성과 중성을 입력하면 I, J, K, L 자판이 겹받침 ㅆ, ㄶ, ㅄ, ㄺ로 일시적으로 자동으로 변경됩니다.&#x0D;&#x0A;- 이 네 키는 '받침 자리'에서만 겹받침으로 입력됩니다.&#x0D;&#x0A;- 그 외의 겹받침은 두 키를 동시에 누르는 '모아치기'로 입력하실 수 있습니다.&#x0D;&#x0A;  (예) ㅀ은 ㄹ과 ㅎ을 동시에 눌러서 입력하실 수 있습니다.)&#x0D;&#x0A;- 이중모음이 가능한 경우 이중모음이 겹받침보다 우선적으로 입력됩니다.&#x0D;&#x0A;- 익숙하지 않으시다면 기존 두벌식 입력도 그대로 사용하실 수 있습니다.&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;※ 별도로 제공되는 모아치기 프로그램을 사용하시면 초성과 중성을 동시에 입력하실 수 있습니다.&#x0D;&#x0A;  (예) '광'을 입력시, 'ㄱ', 'ㅗ', 'ㅏ'을 동시에 누른 후에 종성인 'ㅇ'을 누르시면 입력됩니다.)&#x0D;&#x0A;- Shift를 사용하는 글자(ㅉ, ㅒ 등등)는 모아치기 하실 수 없습니다.&#x0D;&#x0A;- 제대로 글자가 나오지 않는 경우에는 F8키를 누르셔서 모아치기 기능을 On으로 켜주세요." object="CAdvancedScheme">
 		<KeyTable name="두벌식 겹받침 e (두겹이)" flag="0" from="33" to="126">
 			<Key at="0x21" value="0x21"/>
 			<Key at="0x22" value="0x22"/>
@@ -42,9 +42,9 @@
 			<Key at="0x46" value="0x25A1"/>
 			<Key at="0x47" value="0x25CE"/>
 			<Key at="0x48" value="0x203B"/>
-			<Key at="0x49" value="H2|_BS"/>
+			<Key at="0x49" value="H2|_SS"/>
 			<Key at="0x4A" value="H3|_NH"/>
-			<Key at="0x4B" value="H3|_SS"/>
+			<Key at="0x4B" value="H3|_BS"/>
 			<Key at="0x4C" value="H2|_RG"/>
 			<Key at="0x4D" value="0x2026"/>
 			<Key at="0x4E" value="0xB7"/>
@@ -74,9 +74,9 @@
 			<Key at="0x66" value="T&lt;=1 ? H2|R_ : H2|_R"/>
 			<Key at="0x67" value="T&lt;=1 ? H2|H_ : H2|_H"/>
 			<Key at="0x68" value="H2|O_"/>
-			<Key at="0x69" value="T!=2 ? H2|YA : H3|_BS"/>
+			<Key at="0x69" value="T!=2 ? H2|YA : H3|_SS"/>
 			<Key at="0x6A" value="T!=2 || E==43 ? H2|EO : H3|_NH"/>
-			<Key at="0x6B" value="T!=2 || E==21 ? H2|A_ : H3|_SS"/>
+			<Key at="0x6B" value="T!=2 || E==21 ? H2|A_ : H3|_BS"/>
 			<Key at="0x6C" value="T!=2 || E==21 || E==43 || E==64 ? H2|I_ : H3|_RG"/>
 			<Key at="0x6D" value="H2|EU"/>
 			<Key at="0x6E" value="H2|U_"/>
