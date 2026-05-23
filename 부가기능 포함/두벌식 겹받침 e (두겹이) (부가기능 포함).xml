@@ -28,7 +28,7 @@
 			<Key at="0x38" value="Z ? (Z=0, 0x2A) : 0x38"/>
 			<Key at="0x39" value="Z ? (Z=0, 0x28) : 0x39"/>
 			<Key at="0x3A" value="Z=0, 0x3A"/>
-			<Key at="0x3B" value="Z ? (Z=0, 0x3A) : (D==1 || D==24 || D==86 || D==109 || D==161)&amp;&amp;!E ? H2|0x1F4 : (E==5 || E==15)&amp;&amp;!F ? H2|0x1F50000 : F==1 ? (h=1, H2|_GG) : F==24 ? (h=1, H2|_DD) : F==86 ? (h=1, H2|_BB) : F==109 ? (h=1, H2|_SS) : F==161 ? (h=1, H2|_JJ) : 0x3B"/>
+			<Key at="0x3B" value="Z ? (Z=0, 0x3A) : (D==1 || D==24 || D==86 || D==109 || D==161)&amp;&amp;!E ? H2|0x1F4 : (E==5 || E==15)&amp;&amp;!F ? H2|0x1F50000 : F==1 ? (h=1, H2|_GG) : F==109 ? (h=1, H2|_SS) : F==7 || F==20 || F==24 || F==37 || F==51 || F==58 || F==86 || F==94 || F==161 ? H2|0x1F400000000 : 0x3B"/>
 			<Key at="0x3C" value="Z=0, 0x3C"/>
 			<Key at="0x3D" value="Z ? (Z=0, 0x2B) : 0x3D"/>
 			<Key at="0x3E" value="Z=0, 0x3E"/>
@@ -277,7 +277,7 @@
 			<UnitMix unit="CHO" a="D_" b="500" to="DD"/>
 			<UnitMix unit="CHO" a="B_" b="500" to="BB"/>
 			<UnitMix unit="CHO" a="S_" b="500" to="SS"/>
-			<UnitMix unit="CHO" a="J_" b="500" to="J_"/>
+			<UnitMix unit="CHO" a="J_" b="500" to="JJ"/>
 			<UnitMix unit="JUNG" a="A_" b="O_" to="WA"/>
 			<UnitMix unit="JUNG" a="AE" b="O_" to="WAE"/>
 			<UnitMix unit="JUNG" a="AE" b="501" to="YAE"/>
@@ -296,8 +296,11 @@
 			<UnitMix unit="JUNG" a="I_" b="EU" to="EUI"/>
 			<UnitMix unit="JONG" a="G_" b="R_" to="RG"/>
 			<UnitMix unit="JONG" a="G_" b="S_" to="GS"/>
+			<UnitMix unit="JONG" a="GS" b="500" to="65531"/>
 			<UnitMix unit="JONG" a="N_" b="J_" to="NJ"/>
 			<UnitMix unit="JONG" a="N_" b="H_" to="NH"/>
+			<UnitMix unit="JONG" a="NJ" b="500" to="65531"/>
+			<UnitMix unit="JONG" a="D_" b="500" to="65531"/>
 			<UnitMix unit="JONG" a="R_" b="G_" to="RG"/>
 			<UnitMix unit="JONG" a="R_" b="M_" to="RM"/>
 			<UnitMix unit="JONG" a="R_" b="B_" to="RB"/>
@@ -305,13 +308,19 @@
 			<UnitMix unit="JONG" a="R_" b="T_" to="RT"/>
 			<UnitMix unit="JONG" a="R_" b="P_" to="RP"/>
 			<UnitMix unit="JONG" a="R_" b="H_" to="RH"/>
+			<UnitMix unit="JONG" a="RG" b="500" to="65531"/>
+			<UnitMix unit="JONG" a="RB" b="500" to="65531"/>
+			<UnitMix unit="JONG" a="RS" b="500" to="65531"/>
 			<UnitMix unit="JONG" a="M_" b="R_" to="RM"/>
 			<UnitMix unit="JONG" a="B_" b="R_" to="RB"/>
 			<UnitMix unit="JONG" a="B_" b="S_" to="BS"/>
+			<UnitMix unit="JONG" a="B_" b="500" to="65531"/>
+			<UnitMix unit="JONG" a="BS" b="500" to="65531"/>
 			<UnitMix unit="JONG" a="S_" b="G_" to="GS"/>
 			<UnitMix unit="JONG" a="S_" b="R_" to="RS"/>
 			<UnitMix unit="JONG" a="S_" b="B_" to="BS"/>
 			<UnitMix unit="JONG" a="J_" b="N_" to="NJ"/>
+			<UnitMix unit="JONG" a="J_" b="500" to="65531"/>
 			<UnitMix unit="JONG" a="T_" b="R_" to="RT"/>
 			<UnitMix unit="JONG" a="P_" b="R_" to="RP"/>
 			<UnitMix unit="JONG" a="H_" b="N_" to="NH"/>
@@ -323,7 +332,7 @@
 			<Automata state="0" value="A|B ? 1 : C ? 3 : 0" default="0" remark="초기 상태"/>
 			<Automata state="1" value="C ? 3 : A|B ? D|A&amp;&amp;E|B ? 2 : 1 : 0" default="0" remark="초성 또는 중성 하나만 있는 경우"/>
 			<Automata state="2" value="B ? 2 : C ? 3 : 0" default="0" remark="초성 + 중성. 중성 결합만 허용"/>
-			<Automata state="3" value="h&amp;&amp;(F==1&amp;&amp;C==2 || F==24&amp;&amp;C==26 || F==86&amp;&amp;C==93 || F==109&amp;&amp;C==118 || F==161&amp;&amp;C==165) ? (h=0, -2) : C ? 3 : 0" default="0" remark="초성 + 중성 + 종성"/>
+			<Automata state="3" value="h&amp;&amp;(F==1&amp;&amp;C==2 || F==109&amp;&amp;C==118) ? (h=0, -2) : C ? 3 : 0" default="0" remark="초성 + 중성 + 종성"/>
 		</AutomataTable>
 		<Extra>
 			<Bksp key="1" value1="0" value2="BySyllable" condition1="0" condition2="0"/>
